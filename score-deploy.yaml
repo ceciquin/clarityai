@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: score
+  labels:
+    app: score
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: score
+  template:
+    metadata:
+      labels:
+        app: score
+    spec:
+      containers:
+        - name: score
+          image: 
+          ports:
+            - containerPort: 8080
